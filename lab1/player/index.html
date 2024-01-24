@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="background">
+        <div class="music-player">
+            <div id="imgcontainer">
+                <img src="ali-gaber-yassin.jpg" alt="" id="img">
+            </div>
+            <audio id="myAudio" src="036.mp3" controls>
+                Your browser does not support the audio element.
+            </audio>
+            <div id="buttonscontainer">
+                <button class="buttons" id="play">Play</button>
+                <button class="buttons" id="pause">Pause</button>
+                <button class="buttons" id="stop">Stop</button>
+                <button class="buttons" id="mute">Mute</button>
+            </div>
+            <div id="controls">
+                <table>
+                    <tr>
+                        <th>Volume</th>
+                        <th>
+                            <input type="range" min="1" max="100" value="50" class="slider" id="volume">
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>Speed</th>
+                        <th>
+                            <input type="range" min="1" max="100" value="50" class="slider" id="speed">
+                        </th>
+                    </tr>
+                </table>
+            </div>
+            <div id="songs">
+                <button class="songbuttons" id="sora1">سورة يس</button>
+                <button class="songbuttons" id="sora2">سورة الملك</button>
+                <button class="songbuttons" id="sora3">سورة الرحمن</button>
+                <button class="songbuttons" id="sora4">سورة ق</button>
+            </div>
+        </div>
+    </div>
+    <script defer src="scripts.js"></script>
+</body>
+</html>

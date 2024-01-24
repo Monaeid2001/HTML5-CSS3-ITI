@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Forms Validation</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .myForm {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: #333333;
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <form action="" class="myForm">
+            <h2>Change Email Address</h2>
+            <input type="text" placeholder="Username" id="username"
+                   name="username" pattern="[A-Za-z]+" required 
+                   oninvalid="this.setCustomValidity('The required username may only be a series of alphabetical characters')">
+            <br>
+            <input type="email" placeholder="Email" id="email" required
+                   pattern="[A-Za-z0-9-]+@[A-Za-z0-9-]+\.[A-Za-z]{2,}"
+                   oninvalid="this.setCustomValidity('The required email address may not include any special characters other than the @ sign')">
+            <br>
+            <button type="submit">Change</button>
+        </form>
+    </div>
+</body>
+</html>

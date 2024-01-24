@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bars</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .slidercontainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        #slidertextbox {
+            width: 100px;
+            margin-bottom: 10px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .slider {
+            width: 200px;
+        }
+
+        #sliderval {
+            margin-left: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #3498db;
+        }
+
+        .progresscontainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        progress {
+            width: 200px;
+            height: 20px;
+            margin-bottom: 10px;
+        }
+
+        #progval {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+    <div class="slidercontainer">
+        <input type="text" id="slidertextbox" oninput="updateSliderAndProgress(this)">
+        <input type="range" min="1" max="10" value="1" class="slider" id="myRange" oninput="updateSliderAndProgress(this)">
+        <span id="sliderval">1</span>
+    </div>
+    <div class="progresscontainer">
+        <span>Progress</span>
+        <progress id="myProgress" value="10" max="100"></progress>
+        <span id="progval">10%</span>
+    </div>
+
+    <script defer src="scripts.js"></script>
+</body>
+</html>
